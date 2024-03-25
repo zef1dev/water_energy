@@ -1,30 +1,129 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-  }
-  header {
-    background-color: #0a8aad;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+header .first-line {
+  background: rgb(54, 198, 232);
+  background: linear-gradient(90deg, rgb(54 198 232) 34%, rgba(27, 166, 80, 1) 73%);
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+header .promo-text {
+  display: flex;
+}
+header .promo-text p{
+  padding-left: 10px;
+}
+
+button {
+  padding: 15px 25px;
+  text-transform: uppercase;
+}
+
+button.cta {
+  border-radius: 30px;
+  background-color: #fff;
+  color: #0a8aad;
+  border: none;
+}
+
+header .menu {
+  background-color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px #aeadad;
+}
+
+.logo {
+  width: 15em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+}
+
+nav ul li {
+  margin: 0 10px;
+  padding-bottom: 5px;
+}
+
+nav ul li:first-child {
+  border-bottom: 2px solid #0a8aad;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: #0a8aad;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+
+}
+
+.swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+
+.swiper .swiper-slide img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 840px;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.swiper .slide-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 60%, rgba(27, 166, 80, 0.186) 70%);
+  padding: 10% 30% 10% 10%;
+
+}
+
+.swiper .slide-header {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.swiper .slide-description {
+  font-size: 1rem;
+  font-weight: 400;
+}

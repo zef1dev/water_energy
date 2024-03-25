@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Water and Energy</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
+
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="first-line">
+      <div class="promo-text"><img src="assets/loudspeaker.svg" alt="" width="20">
+        <p>Energy price rise - white paper now available to download</p>
+      </div>
+      <div><button class="cta">Get in touch</button></div>
+    </div>
+    <div class="menu">
+      <div class="logo"><img src="assets/Logo.svg" /></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
+  <section class="hero">
+    <!-- Slider main container -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="assets/Image_01.jpg" alt="slide 1">
+          <div class="slide-text">
+            <h2 class="slide-header">WATER AND ENERGY TASKFORCE</h2>
+            <h3 class="slide-description">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras
+              ultricies ligula sed
+              magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+              dui.</h3>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/Image_02.jpg" alt="slide 2">
+          <div class="slide-text">
+            <h2 class="slide-header">Welcome to WATER AND ENERGY</h2>
+            <h3 class="slide-description">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem
+              ipsum dolor
+              sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+              dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed
+              magna dictum porta.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="slider.js"></script>
 </body>
+
 </html>
