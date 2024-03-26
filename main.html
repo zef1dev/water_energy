@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <div class="header__promo">
@@ -16,10 +18,12 @@
         <img src="assets/loudspeaker.svg" alt="" width="20">
         <p>Energy price rise - white paper now available to download</p>
       </div>
-      <button class="promo__cta">
+
+      <button id="openModal" class="promo__cta">
         <img src="assets/phone.svg" width="10" alt="call to action">
         Get in touch
       </button>
+
     </div>
     <div class="header__menu">
       <div class="logo">
@@ -44,16 +48,23 @@
           <div class="swiper-slide">
             <img src="assets/Image_01.jpg" alt="Slide 1">
             <div class="slide__content">
-              <h2 class="slide__header">WATER AND ENERGY TASKFORCE</h2>
-              <h3 class="slide__description">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</h3>
+              <h3 class="slide__header">WATER AND ENERGY TASKFORCE</h3>
+              <p class="slide__description">Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
+                Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac
+                lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam
+                vehicula elementum sed sit amet dui.</p>
               <button class="slide__btn">Find out more</button>
             </div>
           </div>
           <div class="swiper-slide">
             <img src="assets/Image_02.jpg" alt="Slide 2">
             <div class="slide__content">
-              <h2 class="slide__header">Welcome to WATER AND ENERGY</h2>
-              <h3 class="slide__description">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies ligula sed magna dictum porta.</h3>
+              <h3 class="slide__header">Welcome to WATER AND ENERGY</h3>
+              <p class="slide__description">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum
+                sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Cras ultricies
+                ligula sed magna dictum porta.</p>
+              <button class="slide__btn">Find out more</button>
             </div>
           </div>
         </div>
@@ -67,18 +78,19 @@
     <section class="services">
       <div class="services__list">
         <div class="service">
-          <img src="assets/contact.svg" width="30" alt="Service Icon 1" class="service__icon">
+          <img src="assets/contact.svg" alt="Service Icon 1" class="service__icon">
           <h3 class="service__title">TASK FORCE CONTACTS</h3>
         </div>
         <div class="service">
-          <img src="assets/tasks.svg" width="30" alt="Service Icon 2" class="service__icon">
+          <img src="assets/tasks.svg" alt="Service Icon 2" class="service__icon">
           <h3 class="service__title">TASK FORCE TASKS</h3>
         </div>
         <div class="service">
-          <img src="assets/loudspeaker.svg" width="30" alt="Service Icon 3" class="service__icon">
+          <img src="assets/loudspeaker.svg" alt="Service Icon 3" class="service__icon">
           <h3 class="service__title">TASK FORCE NEWS</h3>
         </div>
       </div>
+      <hr>
     </section>
   </main>
 
@@ -86,7 +98,26 @@
     <p>&copy; Water and Energy Taskforce</p>
   </footer>
 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Contact Form</h2>
+      <form method="post" action="form.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" id="openModal" class="submit__btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="slider.js"></script>
+  <script src="modal.js"></script>
+
 </body>
+
 </html>

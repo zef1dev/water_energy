@@ -7,17 +7,16 @@
   --font-size: 14px;
 }
 
-/* Global */
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size); 
+  font-size: var(--font-size);
   line-height: 1.5;
   color: var(--dark-color);
 }
 
 /* Header */
 .header__promo {
-  background: linear-gradient(90deg, rgb(54, 198, 232) 34%, rgba(27, 166, 80, 1) 73%);
+  background: linear-gradient(90deg, #0a8aad 34%, rgba(27, 166, 80, 1) 73%);
   padding: 4px 50px;
   display: flex;
   justify-content: space-between;
@@ -139,13 +138,12 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 46%, rgba(27, 166, 80, 0.186) 55%);
-  padding: 7% 29% 5% 3%;
+  padding: 5% 29% 5% 3%;
 }
 
 .slide__header {
   font-size: 3rem;
   font-weight: 600;
-  padding-bottom: 1rem;
 }
 
 .slide__description {
@@ -156,18 +154,26 @@ body {
 }
 
 .slide__btn {
-  padding: 10px 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
   border: 3px solid;
+  font-weight: 600;
   border-image-slice: 1;
   border-width: 3px;
   background-color: #fff;
   border-image-source: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+  position: absolute;
+  z-index: 1;
+
 }
+
 .slide__btn:hover {
   border: 3px solid;
   border-image-slice: 1;
   border-width: 3px;
-  background-color: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  background: linear-gradient(90deg, rgba(27, 166, 80, 1) 34%, #0a8aad 73%);
   border-image-source: linear-gradient(to left, var(--primary-color), var(--secondary-color));
 }
 
@@ -178,8 +184,9 @@ body {
 /* Services Section  */
 .services {
   background-color: var(--light-color);
-  padding: 50px;
+  padding-top: 50px;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .services__list {
@@ -189,20 +196,26 @@ body {
 }
 
 .service {
-  margin: 20px;
-  max-width: 300px;
+  margin: 20px 0px;
+  max-width: 322px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .service__icon {
-  width: 65px;
+  display: inline-block;
+  overflow: inherit;
+  width: 40px;
   height: 40px;
   max-width: 100%;
   background-color: #098aad;
   padding: 30px;
   border-radius: 60px;
 }
-
 
 .footer {
   background-color: var(--primary-color);
@@ -211,8 +224,81 @@ body {
   padding: 10px;
 }
 
+hr {
+  background: linear-gradient(90deg, #0a8aad 34%, rgba(27, 166, 80, 1) 73%);
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  margin-top: 20px;
+  width: 50%;
+}
+
+.submit__btn {
+  margin: 20px auto;
+  padding: 15px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 3px solid;
+  font-weight: 600;
+  border-image-slice: 1;
+  border-width: 3px;
+  background-color: #fff;
+  border-image-source: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+
+}
+
+form input {
+  height: 25px;
+  margin: 10px 0px;
+}
+
 
 @media (max-width: 768px) {
+
   .header__promo,
   .header__menu {
     flex-direction: column;
@@ -227,9 +313,12 @@ body {
     justify-content: center;
     margin-top: 10px;
   }
-  .swiper .swiper-button-next, .swiper-button-prev {
-    width: 5% !important; 
-}
+
+  .swiper .swiper-button-next,
+  .swiper-button-prev {
+    width: 5% !important;
+  }
+
   .slide__content {
     padding: 5%;
     position: absolute;
@@ -237,9 +326,11 @@ body {
     height: 100%;
     background: rgb(255 255 255 / 27%);
   }
+
   .swiper .swiper-slide img {
     width: 100%;
   }
+
   .slide__header {
     font-size: 2rem;
   }
